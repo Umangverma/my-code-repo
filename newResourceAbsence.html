@@ -1,0 +1,28 @@
+<!-- sldsValidatorIgnore -->
+
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            Create Resource Absence: Non Availability
+        </h3>
+        <div slot="footer">
+                <button class="slds-button slds-button--brand" onclick={handleSaveRA}>Save</button>
+        </div>
+        <div class="slds-form">
+            <div onkeyup={handleKeyUp}>
+                <lightning-input name="enter-search" label="Resource" type="search" required="true"></lightning-input>
+            </div>
+            <div role="combobox">
+                <lightning-combobox  name="filter" required="true" label="Type" value={selectedValue} options={options} onchange={handlePicklistChange} placeholder="Select Type">
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-form">
+            <lightning-input type="datetime" required="true" label="Resource Start Time" value={resourceStart} onchange={handleTechnicianStartChange} ></lightning-input>
+            <lightning-input type="datetime"  required="true" label="Resource End Time" value={resourceEnd} onchange={handleTechnicianEndChange}></lightning-input>
+            <lightning-textarea name="input1" label="Description" onchange={handleDescriptionChange}></lightning-textarea>
+            <lightning-input type="checkbox" label="Approved" onchange={handleApprovedChange}></lightning-input>
+        </div>
+    </lightning-card>
+    
+</template>
