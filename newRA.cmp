@@ -1,0 +1,7 @@
+<aura:component>
+    <lightning:recordEditForm aura:id="recordEditForm" objectApiName="ResourceAbsence">
+        <lightning:messages />
+        <lightning:inputField fieldName="Name" />
+        <lightning:button class="slds-var-m-top_small" type="submit" label="Create" />
+    </lightning:recordEditForm>
+</aura:component>
